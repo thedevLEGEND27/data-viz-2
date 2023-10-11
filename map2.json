@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+  "title": "SKI RESORTS IN EUROPE",
+  "width": 800,
+  "height": 400,
+  "projection": {
+      "type": "mercator"
+  },
+  "layer": [
+    {
+      "data":{
+        "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/ne_50m.json",
+        "format": {
+          "type":"topojson",
+          "feature": "ne_50m_admin_0_countries"
+        }
+      },
+      "transform": [
+          {
+              "lookup": "properties.NAME",
+              "from":{
+                  "data":{
+                      "url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/European_Ski_Resorts.csv"
+                  },
+                  "key": "Country",
+                  "fields": [
+                      "HighestPoint"
+                  ]
+              }
+          }
+      ],
+      "mark":{
+          "type": "geoshape",
+          "stroke": "black",
+          "strokeWidth": 0.5
+      },
+      "encoding": {
+          "color":{
+              "field": "HighestPoint",
+              "type": "quantitative",
+              "title": "# Of resorts",
+              "scale":{
+                  "type": "threshold",
+                  "domain":[5,10,50,100,500,1000,2000,5000]
+
+              }
+          }
+      }
+    }
+  ]
+}

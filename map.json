@@ -2,12 +2,14 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": "SKI RESORTS IN EUROPE",
     "width": 800,
-    "height": 1000,
-    "projection": {"type": "equalEarth"},
+    "height": 400,
+    "projection": {
+        "type": "mercator"
+    },
     "layer": [
       {
         "data":{
-          "url":"ne_50m.json",
+          "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/ne_50m.json",
           "format": {
             "type":"topojson",
             "feature": "ne_50m_admin_0_countries"
@@ -18,10 +20,12 @@
                 "lookup": "properties.NAME",
                 "from":{
                     "data":{
-                        "url": "European_Ski_Resorts.csv"
+                        "url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/European_Ski_Resorts.csv"
                     },
                     "key": "Country",
-                    "fields": ["DayPassPriceAdult"]
+                    "fields": [
+                        "DayPassPriceAdult"
+                    ]
                 }
             }
         ],
@@ -32,7 +36,7 @@
         },
         "encoding": {
             "color":{
-                "field": "Country Number of Resorts",
+                "field": "DayPassPriceAdult",
                 "type": "quantitative",
                 "title": "# Of resorts",
                 "scale":{

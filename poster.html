@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
-    <script src="map.js"></script>
+    <script src="embed.js"></script>
     <style media="screen">
       /* Add space between Vega-Embed links */  
       .vega-actions a {
@@ -17,14 +17,15 @@
     </style>
   </head>
   <body>
-    
-    <h1>Template for Embedding Vega-Lite Visualization</h1>
-    <!-- Container for the visualization -->
-    <div id="vis"></div>
-    <div id="map"></div>
 
+    <h1>Ski Resorts</h1>
+    <!-- Container for the visualization -->
+    <div id="graph2"></div>
     <script>
-      // Assign the specification to a local variable vlSpec.
+      var vlSpec = config
+      vegaEmbed('#graph2', vlSpec,{"actions": false}).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
     </script>
   </body>
 </html>
