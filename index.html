@@ -5,27 +5,26 @@
     <meta charset="utf-8" />
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
-    <script src="embed.js"></script>
+    <script src="map.js"></script>
     <style media="screen">
-      /* Add space between Vega-Embed links */  
+      /* Add space between Vega-Embed links  */
       .vega-actions a {
         margin-right: 5px;
       }
-      
     </style>
   </head>
   <body>
-
-    <h1>Ski Resorts</h1>
+    <h1>Template for Embedding Vega-Lite Visualization</h1>
     <!-- Container for the visualization -->
-    <div id="graph2"></div>
+    <div id="vis"></div>
+
     <script>
-      var vlSpec = config
-      vegaEmbed('#graph2', vlSpec,{"actions": false}).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
+      // Assign the specification to a local variable vlSpec.
+      var data = 'test.json';
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis', data);
     </script>
   </body>
 </html>
