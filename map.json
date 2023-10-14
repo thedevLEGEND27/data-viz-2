@@ -25,19 +25,6 @@
       },
       { 
         "data":{
-          "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/ne_50m_ocean.json",
-          "format": {
-            "type":"topojson",
-            "feature": "ne_50m_ocean"
-          }
-        }, 
-          "mark":{
-            "type": "geoshape", 
-            "fill": "skyblue"
-          }
-      },
-      { 
-        "data":{
           "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/ne_50m.json",
           "format": {
             "type":"topojson",
