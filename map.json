@@ -27,7 +27,8 @@
                         "DayPassPriceAdult"
                     ]
                 }
-            }
+            },
+            {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
         ],
         "mark":{
             "type": "geoshape",
