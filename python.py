@@ -6,7 +6,7 @@ eu_data = pd.read_csv("Countries-Europe.csv")
 ski_data = pd.DataFrame(ski_data)
 eu_data = pd.DataFrame(eu_data)
 
-print(ski_data.columns)
+# print(ski_data.columns)
 # eu_data.drop("zoom", axis=1)
 # print(eu_data.loc[eu_data["name"] == "Ukraine", "latitude"])
 
@@ -32,4 +32,4 @@ for country in eu_data.name:
         }
 
 ski_data = ski_data.drop(ski_data.columns[[0]], axis=1)
-ski_data.to_csv("lol.csv")
+# ski_data.to_csv("lol.csv")
