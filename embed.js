@@ -24,3 +24,8 @@ var graph4 = "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github
 vegaEmbed("#graph4", graph4).then(function(result){
 
 }).catch(console.error);
+
+var graph5 = "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/graph5.json";
+vegaEmbed("#graph5", graph5).then(function(result){
+
+}).catch(console.error);

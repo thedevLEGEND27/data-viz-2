@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A vertical box plot showing median, min, and max body mass of penguins.",
+    "data": {"url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/European_Ski_Resorts.csv"},
+    "mark": {
+      "type": "errorband",
+      "extent": "min-max"
+    },
+    "encoding": {
+      "x": {"field": "Country", "type": "nominal"},
+      "color": {"field": "NightSki", "type": "nominal", "legend": null},
+      "y": {
+        "field": "DayPassPriceAdult",
+        "type": "quantitative",
+        "scale": {"zero": false}
+      },
+      "tooltip": {
+        "field": "DayPassPriceAdult",
+        "aggregate": "mean"
+      }
+    }
+  }
+  
