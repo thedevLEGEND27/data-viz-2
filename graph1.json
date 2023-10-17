@@ -1,31 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bubble plot showing the correlation between health and income for 187 countries in the world (modified from an example in Lisa Charlotte Rost's blog post 'One Chart, Twelve Charting Libraries' --http://lisacharlotterost.github.io/2016/05/17/one-chart-code/).",
-  "width": 500,"height": 300,
+  "transform": [],
+  "width": 500,
+  "height": 500,
   "data": {
-    "url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/European_Ski_Resorts.csv"
+    "url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/FINALTEMP.csv"
   },
-  "params": [{
-    "name": "view",
-    "select": "interval",
-    "bind": "scales"
-  }],
-  "mark": "circle",
+  "mark": "rect",
   "encoding": {
-    "y": {
-      "field": "HighestPoint",
-      "type": "quantitative",
-      "scale": {"zero": false},
-      "axis": {"minExtent": 30}
-    },
     "x": {
-      "field": "Country"
+      "timeUnit":"date",
+      "field": "Month",
+      "type": "ordinal",
+      "title": "Month"
     },
-    "size":{
-      "field": "DayPassPriceAdult", 
+    "color": {
+      "field": "Temp",
       "type": "quantitative",
-      "scale": {"rangeMax": 250}
-      },
-      "color": {"field": "NightSki", "type": "nominal"}
+      "title": "Temperature"
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Country"
+    }
   }
 }
