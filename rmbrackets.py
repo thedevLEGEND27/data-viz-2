@@ -37,4 +37,4 @@ for col in df[:]:
 
 print(df)
 df.drop(df.columns[[0]], axis=1)
-df.to_csv("correct_temps_edited.csv")
+# df.to_csv("correct_temps_edited.csv")
