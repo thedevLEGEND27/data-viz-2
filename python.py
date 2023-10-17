@@ -1,6 +1,6 @@
 import pandas as pd
 
-ski_data = pd.read_csv("European_Ski_Resorts.csv")
+temp_data = pd.read_csv("country temp.csv")
 eu_data = pd.read_csv("Countries-Europe.csv")
 
 ski_data = pd.DataFrame(ski_data)
