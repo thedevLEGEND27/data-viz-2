@@ -1,5 +1,21 @@
 
-var vlSpec = config
-vegaEmbed('#graph2', vlSpec,{"actions": false}).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+
+var map1 = "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/map.json";
+vegaEmbed("#map", map1).then(function(result){
+
+}).catch(console.error);
+
+var graph1 = "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/graph1.json";
+vegaEmbed("#graph1", graph1).then(function(result){
+
+}).catch(console.error);
+
+var graph2 = "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/graph2.json";
+vegaEmbed("#graph2", graph2).then(function(result){
+
+}).catch(console.error);
+
+var graph3 = "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/graph3.json";
+vegaEmbed("#graph3", graph2).then(function(result){
+
 }).catch(console.error);

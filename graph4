@@ -1,0 +1,22 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Plot showing average data with raw values in the background.",
+  "data": {"url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/European_Ski_Resorts.csv"},
+  "transform": [
+    {
+      "fold": ["BeginnerSlope", "IntermediateSlope", "DifficultSlope"],
+      "as": [
+        "key",
+        "value"
+      ]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal", "stack": "zero",
+    "sort":"-y"
+    },
+    "y": {"field": "value", "type": "quantitative", "title": "Slope"
+    },
+    "color": {"field": "key", "type": "nominal", "title":"Slope Type"}
+  }
+}

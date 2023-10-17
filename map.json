@@ -7,7 +7,7 @@
         "type": "mercator",
         "scale": "350",
         "center":[30,55],
-        "clipExtent": [[0, 0], [600, 800]]
+        "clipExtent": [[0, 0], [500, 550]]
     },
     "properties":{"title":"Europe (Mercator)",
     "width":"400", "height":"300"}
@@ -73,7 +73,7 @@
             "color":{
                 "field": "HighestPoint",
                 "type": "quantitative",
-                "title": "# Of resorts",
+                "title": "Highest Point",
                 "scale":{
                     "type": "threshold",
                     "domain":[0,1000,1500,2000,3000,4000]

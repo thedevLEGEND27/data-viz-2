@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Plot showing average data with raw values in the background.",
+    "data": {"url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/European_Ski_Resorts.csv"},
+    "layer": [{
+      "mark": {"type": "point", "opacity": 0.3},
+      "encoding": {
+        "x": {"field": "Country"},
+        "y": {"field": "HighestPoint", "type": "quantitative"}
+      }
+    }, {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "Country"},
+        "y": {"aggregate": "median", "field": "HighestPoint"},
+        "color":{"value":"blue"}
+      }}, {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "Country"},
+        "y": {"aggregate": "median", "field": "LowestPoint"},
+        "color":{"value":"darkblue"}
+      }
+    }]
+  }
+  
