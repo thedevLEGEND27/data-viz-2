@@ -9,9 +9,9 @@
         "center":[30,55],
         "clipExtent": [[0, 0], [500, 550]]
     },
-    "properties":{"title":"Europe (Mercator)",
-    "width":"400", "height":"300"}
-    ,
+    "properties":{ 
+        "title":"Europe (Mercator)",
+    "width":"400", "height":"300"},
     "layer": [
       {
         "data":{
@@ -58,13 +58,10 @@
       },
       {
         "data":{
-          "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/europe_snowfall_indicators.csv",
-          "format": {
-            "feature": "mean_winter_tas"
-          }
+          "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/europe_snowfall_indicators.csv"
         },
         "mark":{
-            "type": "area",
+            "type": "geoshape",
             "stroke": "black",
             "strokeWidth": 0.5
         },
@@ -81,7 +78,7 @@
 
                 },
               "size": {
-                "field": "num_Country", "type": "quantitative"
+                "field": "mean_winter_tas", "type": "quantitative"
               }
             },"tooltip":[
               {"field": "properties.NAME", "type": "nominal", "title": "Country"},
