@@ -1,31 +1,165 @@
 <!doctype html>
-<html>
+<html class="no-js" lang="en">
   <head>
-    <title>Vega-Lite Bar Chart</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="custom.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
     <script src="embed.js"></script>
-    <style media="screen">
-      /* Add space between Vega-Embed links  */
-      .vega-actions a {
-        margin-right: 5px;
-      }
-    </style>
   </head>
   <body>
-    <h1>Template for Embedding Vega-Lite Visualization</h1>
-    <!-- Container for the visualization -->
-    <div id="map"></div>
-    <div id="graph1"></div>
-    <div id="graph2"></div>
-    <div id="graph3"></div>
-    <div id="graph4"></div>
-    <div id="graph5"></div>
-    <div id="graph6"></div>
-    <div id="graph7"></div>
 
+
+    <div class="callout large primary headerimg">
+      <div class="row column text-center">
+        <h1><b><i> Ultimate European Winter Guide</i></b></h1>
+        <h2 class="subheader">FIT3179 - Tej Sidhu</h2>
+      </div>
+    </div>
+
+    <!-- We can now combine rows and columns when there's only one column in that row -->
+    <div class="row medium-8 large-8 columns">
+      <div class="blog-post">
+        <h3 class="align-center">The Highest Peaks in Europe</h3>
+        <div id="map"></div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="#">Figure 1: Highest Skiing Points in Europe</a></li>
+          </ul>
+        </div>
+        <p>If you're seeking the ultimate skiing adventure in Europe, 
+          explore the continent's highest peaks. 
+          Spain has the highest peaks, standing at 3282 meters elevation, 
+          and Dufourspitze in Switzerland, reaching 3573 meters, 
+          are iconic destinations for high-altitude skiing. With breathtaking landscapes, 
+          pristine snow, and world-class resorts, these peaks offer a thrilling experience
+           for skiing enthusiasts seeking an unforgettable alpine adventure.</p>
+      </div>
+
+      <div class="blog-post">
+        <h3>When is the best time for a ski holiday? <small>2022</small></h3>
+        <div id="graph1"></div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature">Figure 2: Heatmap of 2022's European Weather</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <p>The best time to go skiing in Europe largely depends on the specific region
+           you plan to visit and your skiing preferences. Here's a general guideline 
+           for some of the popular skiing destinations in Europe:</p>
+        <h5>Our Favourites:</h5>
+        <ul class="menu simple">
+          <li><b>The Alps (France, Switzerland, Italy, Austria):</b>
+            <p>December to early April. 
+            If you're looking for the best combination of snow and fewer crowds, 
+            consider going in January or early February.</p> </li>
+          <li><b>Scandinavia (Norway, Sweden, Finland):  </b>
+              <p>November into April. You'll find unique experiences like skiing under the Northern Lights
+              in the northern regions.</p></li>
+          
+        </ul>
+      </div>
+
+      <div class="blog-post">
+        <h3>Ski Accommodation: Where to Hit the Slopes in Style</h3>
+        <div id="graph2"></div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="https://www.ski-resort-stats.com">Figure 3: Skiing Resorts </a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <p>If you want to be spoilt for options then <b>Austria, France & Switzerland </b>have you covered. 
+           Austria boasts renowned ski resorts, including <b> Anton, Kitzbühel, and Saalbach-Hinterglemm.</b>
+           These destinations offer superb skiing, top-notch facilities, and a delightful après-ski atmosphere
+           that's hard to rival.
+        </p>
+      </div>
+
+      <div class="blog-post">
+        <h3>Base Camp to Summit: How high can you go?</h3>
+        <div id="graph3"></div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="#">Figure 4: Highest & Lowest Skiing Points in Europe</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <p>Depending on your experience the height of peaks you're willing to 
+          undertake change. If you're looking to stretch yourself look no further than France.
+        If its your first time then Lithuania and Norway are highly recommended.   </p>
+      </div>
+
+      <div class="blog-post">
+        <h3>Total Slopes By Level</h3>
+        <div id="graph4"></div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="#">Figure 5: Slopes By Level Europe</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <p>Ski slopes are tailored to all skill levels.
+           Beginners embrace gentle, forgiving slopes, 
+           intermediates navigate a mix of terrain, and experts
+          navigate steep, challenging descents with tight turns.
+          Whether you're just starting or a seasoned pro, 
+          there's a slope for every level of skiing expertise.
+        </p>
+        <p>The countries with the most total slope also feature the most number of restors to stay at,
+          making you spoilt for choice whatever level you are at. 
+        </p>
+      </div>
+
+      <div class="blog-post">
+        <h3>The Price Tag For A Day Of Fun <small>Feb 2022</small></h3>
+        <div id="graph5"></div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="#">Figure 6: Daily Adult Pass Averages</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <p>Skiing in Europe is an exhilarating adventure that doesn't have to break the bank.
+           On average, a day on the slopes costs about <b>$40</b>, making it an accessible winter sport 
+           for many. Surprisingly, Denmark, not typically associated with skiing, offers the most
+            budget-friendly experience. This charming Scandinavian country boasts some
+             smaller ski areas, and its affordability makes it an excellent destination</p>
+      </div>
+
+    
+      <div class="blog-post">
+        <div class="grid-x grid-padding-x align-center">
+        <div id="graph6"></div>
+        </div>
+        <div class="callout">
+          <ul class="menu simple">
+            <li><a href="#">Figure 7: Estimated Average Daily Cost</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <p>If you're from a country that doesn't have snow or you can't bring equipment, 
+          then renting out gear may very well be a great choice. You can expect to spend 
+        around $200 a day for all your sking needs.  </p>
+      </div>
+
+    </div>
+
+    <p id="bottom"></p>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
+
+
+
