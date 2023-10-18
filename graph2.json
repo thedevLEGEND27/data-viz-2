@@ -9,7 +9,8 @@
     "y": {
       "aggregate":"count",
       "field": "Country",
-      "type": "ordinal"
+      "type": "ordinal",
+      "title":"# of Resorts"
     },
     "x": {
       "field": "Country",

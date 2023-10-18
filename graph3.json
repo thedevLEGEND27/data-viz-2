@@ -12,13 +12,13 @@
       "mark": "line",
       "encoding": {
         "x": {"field": "Country"},
-        "y": {"aggregate": "median", "field": "HighestPoint"},
+        "y": {"aggregate": "median", "field": "HighestPoint", "title": "Highest Point"},
         "color":{"value":"blue"}
       }}, {
       "mark": "line",
       "encoding": {
         "x": {"field": "Country"},
-        "y": {"aggregate": "median", "field": "LowestPoint"},
+        "y": {"aggregate": "median", "field": "LowestPoint","title": "Lowest Point"},
         "color":{"value":"darkblue"}
       }
     }]
