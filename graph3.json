@@ -12,15 +12,44 @@
       "mark": "line",
       "encoding": {
         "x": {"field": "Country"},
-        "y": {"aggregate": "median", "field": "HighestPoint", "title": "Highest Point"},
-        "color":{"value":"blue"}
+        "y": {"aggregate": "average", "field": "HighestPoint", "title": "Highest Point"},
+        "color":{"value":"blue"},
       }}, {
-      "mark": "line",
+      "mark": {"type": "line"},
       "encoding": {
         "x": {"field": "Country"},
-        "y": {"aggregate": "median", "field": "LowestPoint","title": "Lowest Point"},
+        "y": {"aggregate": "average", "field": "LowestPoint","title": "Lowest Point"},
         "color":{"value":"darkblue"}
       }
-    }]
+    },
+    {
+      "data": {"url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/European_Ski_Resorts.csv"},
+      "mark": "rule",
+      "encoding": {
+        "x": {"field": "Country", "type": "nominal"},
+        "opacity": {
+          "condition": {"value": 0.3, "param": "hover", "empty": false},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"aggregate": "mean","field": "HighestPoint", "type": "quantitative"},
+          {"aggregate": "mean", "field": "LowestPoint", "type": "quantitative"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["date"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
+      ]
+    }
+    ]
   }
   
