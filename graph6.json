@@ -9,7 +9,7 @@
         {"category": "Food", "value": 25}
       ]
     },
-    "mark": "arc",
+    "mark": {"type": "arc", "tooltip": true},
     "encoding": {
       "theta": {"field": "value", "type": "quantitative"},
       "color": {"field": "category", "type": "nominal"}
