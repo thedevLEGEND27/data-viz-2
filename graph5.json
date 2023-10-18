@@ -14,10 +14,16 @@
         "type": "quantitative",
         "scale": {"zero": false}
       },
-      "tooltip": {
+      "tooltip": [{
         "field": "DayPassPriceAdult",
-        "aggregate": "mean"
+        "aggregate": "mean",
+        "title":"Average Daily Price"
+      },
+      {
+        "field": "Country",
+        "title":"Country"
       }
+    ]
     }
   }
   
