@@ -8,7 +8,8 @@
         "x": {"field": "Country"},
         "y": {"field": "HighestPoint", "type": "quantitative"}
       }
-    }, {
+    }, 
+    {
       "mark": "line",
       "encoding": {
         "x": {"field": "Country"},
