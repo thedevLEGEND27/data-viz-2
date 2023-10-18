@@ -69,6 +69,7 @@
             "longitude": {"field": "LON", "type": "quantitative"},
             "latitude": {"field": "LAT", "type": "quantitative"},
             "color":{
+                "aggregate":"average",
                 "field": "mean_winter_tas",
                 "type": "quantitative",
                 "title": "# Of resorts",
