@@ -14,7 +14,7 @@
       "encoding": {
         "x": {"field": "Country"},
         "y": {"aggregate": "average", "field": "HighestPoint", "title": "Highest Point"},
-        "color":{"value":"blue"},
+        "color":{"value":"blue"}
       }}, {
       "mark": {"type": "line"},
       "encoding": {
