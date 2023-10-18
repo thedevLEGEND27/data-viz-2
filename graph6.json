@@ -9,6 +9,8 @@
         {"category": "Food", "value": 25}
       ]
     },
+    "autosize2": {"contains": "padding", "resize": true, "type": "fit"},
+    "width": "container",
     "mark": "arc",
     "encoding": {
       "theta": {"field": "value", "type": "quantitative"},
