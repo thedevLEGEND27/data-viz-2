@@ -1,0 +1,94 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "title": "SKI RESORTS IN EUROPE",
+    "width": 800,
+    "height": 600,
+    "projection": {
+        "type": "mercator",
+        "scale": "350",
+        "center":[30,55],
+        "clipExtent": [[0, 0], [500, 550]]
+    },
+    "properties":{"title":"Europe (Mercator)",
+    "width":"400", "height":"300"}
+    ,
+    "layer": [
+      {
+        "data":{
+          "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/ne_50m_ocean.json",
+          "format": {
+            "type":"topojson",
+            "feature": "ne_50m_ocean"
+          }
+      },
+        "mark":{
+          "type": "geoshape",
+          "fill":"skyblue"
+        }
+      },
+      {
+      "data": {
+        "url": "https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2.github.io/main/ne_50m_admin_0_countries.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_50m_admin_0_countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "whitesmoke",
+        "stroke": "darkgrey"
+      },
+      "width": 800,
+      "height": 500
+      },
+      { 
+        "data":{
+          "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/ne_50m.json",
+          "format": {
+            "type":"topojson",
+            "feature": "ne_50m_admin_0_countries"
+          }
+        },
+        "mark":{
+            "type": "geoshape",
+            "stroke": "black",
+            "strokeWidth": 0.5
+        }
+      },
+      {
+        "data":{
+          "url":"https://raw.githubusercontent.com/thedevLEGEND27/data-viz-2/main/europe_snowfall_indicators.csv",
+          "format": {
+            "feature": "mean_winter_tas"
+          }
+        },
+        "mark":{
+            "type": "area",
+            "stroke": "black",
+            "strokeWidth": 0.5
+        },
+        "encoding": {
+            "longitude": {"field": "LON", "type": "quantitative"},
+            "latitude": {"field": "LAT", "type": "quantitative"},
+            "color":{
+                "field": "mean_winter_tas",
+                "type": "quantitative",
+                "title": "# Of resorts",
+                "scale":{
+                    "type": "threshold",
+                    "domain":[0,1000,1500,2000,3000,4000]
+
+                },
+              "size": {
+                "field": "num_Country", "type": "quantitative"
+              }
+            },"tooltip":[
+              {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+              {"field": "HighestPoint", "type": "quantitative", "title": "HighestPoint"},
+              {"field": "LowestPoint", "type": "quantitative", "title": "LowestPoint"}
+            ]
+            }     
+      }
+    ]
+  }
