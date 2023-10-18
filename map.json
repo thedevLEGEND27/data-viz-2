@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": "SKI RESORTS IN EUROPE",
-    "width": 500,
+    "width": 550,
+    
     "height": 600,
     "projection": {
         "type": "mercator",
